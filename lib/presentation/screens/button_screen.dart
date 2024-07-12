@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 
 class ButtonScreen extends StatelessWidget {
+
+  static const String routeName = 'buttons';
   
   const ButtonScreen({super.key});
 

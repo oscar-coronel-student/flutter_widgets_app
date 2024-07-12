@@ -10,14 +10,17 @@ final router = GoRouter(
   initialLocation: '/',
   routes: [
     GoRoute(
+      name: HomeScreen.routeName,
       path: '/',
       builder: (context, state) => const HomeScreen(),
     ),
     GoRoute(
+      name: ButtonScreen.routeName,
       path: '/buttons',
       builder: (context, state) => const ButtonScreen(),
     ),
     GoRoute(
+      name: CardScreen.routeName,
       path: '/cards',
       builder: (context, state) => const CardScreen(),
     ),

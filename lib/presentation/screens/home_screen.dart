@@ -4,6 +4,8 @@ import 'package:widgets_app/config/menu/menu_items.dart';
 
 
 class HomeScreen extends StatelessWidget {
+
+  static const String routeName = 'home';
   
   const HomeScreen({super.key});
 
@@ -52,7 +54,7 @@ class _CustomListTile extends StatelessWidget {
 
     return ListTile(
       onTap: (){
-        context.push( item.link );
+        context.pushNamed( item.routeName );
       },
       title: Text( item.title ),
       subtitle: Text( item.subtitle ),
