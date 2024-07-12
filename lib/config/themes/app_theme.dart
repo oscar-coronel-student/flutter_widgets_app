@@ -26,10 +26,13 @@ class AppTheme {
       appBarTheme: AppBarTheme(
         centerTitle: false,
         backgroundColor: _colors[colorIndex],
+        iconTheme: const IconThemeData(
+          color: Colors.white
+        ),
         titleTextStyle: const TextStyle(
           color: Colors.white,
-          fontSize: 20
-        )
+          fontSize: 20,
+        ),
       )
     );
   }
