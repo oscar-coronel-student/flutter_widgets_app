@@ -22,7 +22,15 @@ class AppTheme {
   ThemeData getTheme(){
     return ThemeData(
       useMaterial3: true,
-      colorSchemeSeed: _colors[colorIndex]
+      colorSchemeSeed: _colors[colorIndex],
+      appBarTheme: AppBarTheme(
+        centerTitle: false,
+        backgroundColor: _colors[colorIndex],
+        titleTextStyle: const TextStyle(
+          color: Colors.white,
+          fontSize: 20
+        )
+      )
     );
   }
 
