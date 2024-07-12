@@ -51,7 +51,12 @@ class _CustomListTile extends StatelessWidget {
 
     return ListTile(
       onTap: (){
-        // TODO: Navegar a otra pantalla
+        // Navigator.of(context).push(
+        //   MaterialPageRoute(builder: (context) {
+        //     return const ButtonScreen();
+        //   })
+        // );
+        Navigator.pushNamed(context, item.link);
       },
       title: Text( item.title ),
       subtitle: Text( item.subtitle ),
