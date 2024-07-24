@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:widgets_app/presentation/screens/animated_screen.dart';
 import 'package:widgets_app/presentation/screens/button_screen.dart';
 import 'package:widgets_app/presentation/screens/card_screen.dart';
 import 'package:widgets_app/presentation/screens/progress_screen.dart';
@@ -51,5 +52,12 @@ const appMenuItems = <MenuItems>[
     link: '/snackbar',
     icon: Icons.info_outline,
     routeName: SnackbarScreen.routeName
-  )
+  ),
+  MenuItems(
+    title: 'AnimatedContainer',
+    subtitle: 'Stateful widget animado',
+    link: '/animated',
+    icon: Icons.check_box_outline_blank_outlined,
+    routeName: AnimatedScreen.routeName
+  ),
 ];
