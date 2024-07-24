@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:widgets_app/presentation/screens/button_screen.dart';
 import 'package:widgets_app/presentation/screens/card_screen.dart';
 import 'package:widgets_app/presentation/screens/progress_screen.dart';
+import 'package:widgets_app/presentation/screens/snackbar_screen.dart';
 
 
 class MenuItems {
@@ -44,4 +45,11 @@ const appMenuItems = <MenuItems>[
     icon: Icons.refresh_rounded,
     routeName: ProgressScreen.routeName
   ),
+  MenuItems(
+    title: 'Snackbars y diálogos',
+    subtitle: 'Indicadores en pantalla',
+    link: '/snackbar',
+    icon: Icons.info_outline,
+    routeName: SnackbarScreen.routeName
+  )
 ];
