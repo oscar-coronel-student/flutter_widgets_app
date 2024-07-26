@@ -4,6 +4,7 @@ import 'package:widgets_app/presentation/screens/button_screen.dart';
 import 'package:widgets_app/presentation/screens/card_screen.dart';
 import 'package:widgets_app/presentation/screens/progress_screen.dart';
 import 'package:widgets_app/presentation/screens/snackbar_screen.dart';
+import 'package:widgets_app/presentation/screens/ui_controls_screen.dart';
 
 
 class MenuItems {
@@ -59,5 +60,12 @@ const appMenuItems = <MenuItems>[
     link: '/animated',
     icon: Icons.check_box_outline_blank_outlined,
     routeName: AnimatedScreen.routeName
+  ),
+  MenuItems(
+    title: 'UI Controls + Tiles',
+    subtitle: 'Una serie de controles en flutter',
+    link: '/ui_controls',
+    icon: Icons.car_rental_outlined,
+    routeName: UiControlsScreen.routeName
   ),
 ];
