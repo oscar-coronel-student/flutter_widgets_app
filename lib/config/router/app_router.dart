@@ -1,5 +1,6 @@
 import 'package:go_router/go_router.dart';
 import 'package:widgets_app/presentation/screens/animated_screen.dart';
+import 'package:widgets_app/presentation/screens/app_tutorial_screen.dart';
 
 import 'package:widgets_app/presentation/screens/home_screen.dart';
 import 'package:widgets_app/presentation/screens/button_screen.dart';
@@ -47,6 +48,11 @@ final router = GoRouter(
       path: '/ui_controls',
       name: UiControlsScreen.routeName,
       builder: (context, state) => const UiControlsScreen(),
+    ),
+    GoRoute(
+      path: '/app_tutorial',
+      name: AppTutorialScreen.routeName,
+      builder: (context, state) => const AppTutorialScreen(),
     ),
   ],
 );

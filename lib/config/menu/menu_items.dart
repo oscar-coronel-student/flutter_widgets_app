@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:widgets_app/presentation/screens/animated_screen.dart';
+import 'package:widgets_app/presentation/screens/app_tutorial_screen.dart';
 import 'package:widgets_app/presentation/screens/button_screen.dart';
 import 'package:widgets_app/presentation/screens/card_screen.dart';
 import 'package:widgets_app/presentation/screens/progress_screen.dart';
@@ -67,5 +68,12 @@ const appMenuItems = <MenuItems>[
     link: '/ui_controls',
     icon: Icons.car_rental_outlined,
     routeName: UiControlsScreen.routeName
+  ),
+  MenuItems(
+    title: 'Introducción a la aplicación',
+    subtitle: 'Pequeño tutorial introductorio',
+    link: '/app_tutorial',
+    icon: Icons.pages,
+    routeName: AppTutorialScreen.routeName
   ),
 ];
