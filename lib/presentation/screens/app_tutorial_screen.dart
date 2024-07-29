@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -31,15 +32,47 @@ class AppTutorialScreen extends StatelessWidget {
 
 }
 
-class _AppTutorialView extends StatelessWidget {
+class _AppTutorialView extends StatefulWidget {
 
   const _AppTutorialView();
+
+  @override
+  State<_AppTutorialView> createState() => _AppTutorialViewState();
+}
+
+class _AppTutorialViewState extends State<_AppTutorialView> {
+
+  late final PageController pageViewController;
+  bool endReached = false;
+
+  @override
+  void initState() {
+    super.initState();
+
+    pageViewController = PageController();
+    pageViewController.addListener((){
+      final page = pageViewController.page ?? 0;
+      if(!endReached && page >= (slides.length - 1.5)){
+        setState(() {
+          endReached = true;
+        });
+      }
+    });
+  }
+
+  @override
+  void dispose() {
+    pageViewController.dispose();
+
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
         PageView(
+          controller: pageViewController,
           physics: const BouncingScrollPhysics(),
           children: slides.map((slide){
             return _Slide(title: slide.title, caption: slide.caption, imageUrl: slide.imageUrl);
@@ -55,11 +88,25 @@ class _AppTutorialView extends StatelessWidget {
             },
             child: const Text('Salir')
           )
-        )
+        ),
+
+        endReached 
+          ? Positioned(
+            bottom: 30,
+            right: 30,
+            child: FadeInRight(
+              from: 15,
+              delay: const Duration(seconds: 1),
+              child: FilledButton(
+                onPressed: () => context.pop(),
+                child: const Text('Comenzar')
+              ),
+            )
+          )
+          : const SizedBox()
       ],
     );
   }
-
 }
 
 class _Slide extends StatelessWidget {
