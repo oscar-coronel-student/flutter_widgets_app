@@ -3,6 +3,7 @@ import 'package:widgets_app/presentation/screens/animated_screen.dart';
 import 'package:widgets_app/presentation/screens/app_tutorial_screen.dart';
 import 'package:widgets_app/presentation/screens/button_screen.dart';
 import 'package:widgets_app/presentation/screens/card_screen.dart';
+import 'package:widgets_app/presentation/screens/infinite_scroll_screen.dart';
 import 'package:widgets_app/presentation/screens/progress_screen.dart';
 import 'package:widgets_app/presentation/screens/snackbar_screen.dart';
 import 'package:widgets_app/presentation/screens/ui_controls_screen.dart';
@@ -75,5 +76,12 @@ const appMenuItems = <MenuItems>[
     link: '/app_tutorial',
     icon: Icons.pages,
     routeName: AppTutorialScreen.routeName
+  ),
+  MenuItems(
+    title: 'InfiniteScroll y Pull',
+    subtitle: 'Listas infinitas y pull to refresh',
+    link: '/infinite_scroll',
+    icon: Icons.airline_seat_individual_suite_rounded,
+    routeName: InfiniteScrollScreen.routeName
   ),
 ];
