@@ -5,6 +5,7 @@ import 'package:widgets_app/presentation/screens/button_screen.dart';
 import 'package:widgets_app/presentation/screens/card_screen.dart';
 import 'package:widgets_app/presentation/screens/infinite_scroll_screen.dart';
 import 'package:widgets_app/presentation/screens/progress_screen.dart';
+import 'package:widgets_app/presentation/screens/counter_screen.dart';
 import 'package:widgets_app/presentation/screens/snackbar_screen.dart';
 import 'package:widgets_app/presentation/screens/ui_controls_screen.dart';
 
@@ -28,6 +29,13 @@ class MenuItems {
 }
 
 const appMenuItems = <MenuItems>[
+  MenuItems(
+    title: 'Contador',
+    subtitle: 'Contador de números',
+    link: '/counter',
+    icon: Icons.workspaces,
+    routeName: CounterScreen.routeName
+  ),
   MenuItems(
     title: 'Botones',
     subtitle: 'Varios botones en Flutter',
@@ -83,5 +91,5 @@ const appMenuItems = <MenuItems>[
     link: '/infinite_scroll',
     icon: Icons.airline_seat_individual_suite_rounded,
     routeName: InfiniteScrollScreen.routeName
-  ),
+  )
 ];
