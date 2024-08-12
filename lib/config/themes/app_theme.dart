@@ -15,7 +15,7 @@ class AppTheme {
   final bool isDarkMode;
 
   const AppTheme({
-    required int index,
+    int index = 0,
     bool mode = false
   }):
     assert(index >= 0 && index < colors.length, 'Index no soportado para setear el color en el tema'),
@@ -40,5 +40,13 @@ class AppTheme {
       )
     );
   }
+
+  AppTheme copyWith({
+    int? selectedColor,
+    bool? isDarkMode
+  }) => AppTheme(
+    index: selectedColor ?? colorIndex,
+    mode: isDarkMode ?? this.isDarkMode
+  );
 
 }
