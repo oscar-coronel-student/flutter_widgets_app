@@ -7,6 +7,7 @@ import 'package:widgets_app/presentation/screens/infinite_scroll_screen.dart';
 import 'package:widgets_app/presentation/screens/progress_screen.dart';
 import 'package:widgets_app/presentation/screens/counter_screen.dart';
 import 'package:widgets_app/presentation/screens/snackbar_screen.dart';
+import 'package:widgets_app/presentation/screens/theme_screen.dart';
 import 'package:widgets_app/presentation/screens/ui_controls_screen.dart';
 
 
@@ -91,5 +92,12 @@ const appMenuItems = <MenuItems>[
     link: '/infinite_scroll',
     icon: Icons.airline_seat_individual_suite_rounded,
     routeName: InfiniteScrollScreen.routeName
-  )
+  ),
+  MenuItems(
+    title: 'Themes',
+    subtitle: 'Temas de la aplicación',
+    link: '/theme',
+    icon: Icons.color_lens_outlined,
+    routeName: ThemeScreen.routeName
+  ),
 ];

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const List<Color> _colors = [
+const List<Color> colors = [
   Colors.blueAccent,
   Colors.greenAccent,
   Colors.purpleAccent,
@@ -12,20 +12,24 @@ const List<Color> _colors = [
 class AppTheme {
 
   final int colorIndex;
+  final bool isDarkMode;
 
   const AppTheme({
-    required int index
+    required int index,
+    bool mode = false
   }):
-    assert(index >= 0 && index < _colors.length, 'Index no soportado para setear el color en el tema'),
-    colorIndex = index;
+    assert(index >= 0 && index < colors.length, 'Index no soportado para setear el color en el tema'),
+    colorIndex = index,
+    isDarkMode = mode;
 
   ThemeData getTheme(){
     return ThemeData(
       useMaterial3: true,
-      colorSchemeSeed: _colors[colorIndex],
+      colorSchemeSeed: colors[colorIndex],
+      brightness: isDarkMode ? Brightness.dark : Brightness.light,
       appBarTheme: AppBarTheme(
         centerTitle: false,
-        backgroundColor: _colors[colorIndex],
+        backgroundColor: colors[colorIndex],
         iconTheme: const IconThemeData(
           color: Colors.white
         ),

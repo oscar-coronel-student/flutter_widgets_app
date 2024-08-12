@@ -9,6 +9,7 @@ import 'package:widgets_app/presentation/screens/infinite_scroll_screen.dart';
 import 'package:widgets_app/presentation/screens/progress_screen.dart';
 import 'package:widgets_app/presentation/screens/counter_screen.dart';
 import 'package:widgets_app/presentation/screens/snackbar_screen.dart';
+import 'package:widgets_app/presentation/screens/theme_screen.dart';
 import 'package:widgets_app/presentation/screens/ui_controls_screen.dart';
 
 
@@ -65,6 +66,11 @@ final router = GoRouter(
       path: '/counter',
       name: CounterScreen.routeName,
       builder: (context, state) => const CounterScreen(),
+    ),
+    GoRoute(
+      path: '/theme',
+      name: ThemeScreen.routeName,
+      builder: (context, state) => const ThemeScreen(),
     ),
   ],
 );
