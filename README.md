@@ -17,3 +17,8 @@ Para cambiar el splash screen
 ```
 dart run flutter_native_splash:create
 ```
+
+Para generar el app bundle
+```
+flutter build appbundle
+```
